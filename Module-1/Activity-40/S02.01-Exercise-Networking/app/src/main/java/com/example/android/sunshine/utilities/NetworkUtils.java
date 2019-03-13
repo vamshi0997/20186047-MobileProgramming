@@ -19,7 +19,11 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import android.net.Uri;
+
 import java.util.Scanner;
+import java.net.MalformedURLException;
+
 
 /**
  * These utilities will be used to communicate with the weather servers.
@@ -48,7 +52,7 @@ public final class NetworkUtils {
     /* The units we want our API to return */
     private static final String units = "metric";
     /* The number of days we want our API to return */
-    private static final int numDays = 14;
+    private static final Integer numDays = 14;
 
     final static String QUERY_PARAM = "q";
     final static String LAT_PARAM = "lat";
@@ -66,7 +70,23 @@ public final class NetworkUtils {
      */
     public static URL buildUrl(String locationQuery) {
         // TODO (1) Fix this method to return the URL used to query Open Weather Map's API
-        return null;
+        Uri builtUri = Uri.parse(DYNAMIC_WEATHER_URL).buildUpon()
+                .appendQueryParameter(QUERY_PARAM, locationQuery)
+                .appendQueryParameter(LAT_PARAM, format)
+                .appendQueryParameter(LON_PARAM, format)
+                .appendQueryParameter(FORMAT_PARAM, format)
+                .appendQueryParameter(FORMAT_PARAM, format)
+                .appendQueryParameter(UNITS_PARAM, units)
+                .appendQueryParameter(DAYS_PARAM, numDays.toString())
+                .build();
+
+        URL url = null;
+        try {
+            url = new URL(builtUri.toString());
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
+        return url;
     }
 
     /**
