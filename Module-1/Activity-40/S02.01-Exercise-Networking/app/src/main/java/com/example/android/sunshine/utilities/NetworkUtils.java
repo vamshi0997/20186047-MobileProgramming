@@ -72,9 +72,6 @@ public final class NetworkUtils {
         // TODO (1) Fix this method to return the URL used to query Open Weather Map's API
         Uri builtUri = Uri.parse(DYNAMIC_WEATHER_URL).buildUpon()
                 .appendQueryParameter(QUERY_PARAM, locationQuery)
-                .appendQueryParameter(LAT_PARAM, format)
-                .appendQueryParameter(LON_PARAM, format)
-                .appendQueryParameter(FORMAT_PARAM, format)
                 .appendQueryParameter(FORMAT_PARAM, format)
                 .appendQueryParameter(UNITS_PARAM, units)
                 .appendQueryParameter(DAYS_PARAM, numDays.toString())
