@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "228547549802",
+    "firebase_url": "https://shoponline-e3ea8.firebaseio.com",
+    "project_id": "shoponline-e3ea8",
+    "storage_bucket": "shoponline-e3ea8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:228547549802:android:77cd2cb24f99cce0",
+        "android_client_info": {
+          "package_name": "com.example.shoponline"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "228547549802-719ksbu7c5bgmthdupqilm9jf3pomi3j.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.shoponline",
+            "certificate_hash": "5bc2a1bfb2d78721369ca1ef3f74cf72d9005f04"
+          }
+        },
+        {
+          "client_id": "228547549802-31dtmc1k4uio38437bu4e6d0cp8mjenc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC93lvT5XkGhjuYuq-WR4DfbHSjRM-DMq0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "228547549802-31dtmc1k4uio38437bu4e6d0cp8mjenc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
